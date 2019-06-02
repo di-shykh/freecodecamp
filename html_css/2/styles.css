@@ -1,0 +1,102 @@
+*{
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body{
+  background-color: #a9d7d1;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  margin: 20px auto;
+  text-align: center;
+}
+form{
+  background-color: white;
+  max-width: 900px;
+  padding: 20px 10px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 75%;
+}
+p{
+  margin: 16px auto;
+}
+.label{
+  padding: 5px;
+  text-align: right;
+  margin: 10px 0 0 0;
+  vertical-align: top;
+  width: 50%;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  width: 90%
+}
+.right-column{
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  text-align: left;
+  vertical-align: middle;
+}
+input,select,textarea{
+  padding: 5px;
+  margin: 10px;
+  border-radius: 2px;
+  background: white;
+}
+select{
+  background-color:lightgray;
+  width: 140px; 
+}
+input{
+  border: 1px solid lightgray;
+}
+#name,#email,#number,textarea{
+  max-width: 292px;
+  width: 100%;
+}
+button{
+  background-color: #59ACE0;
+  margin: 10px;
+  padding: 1px 6px;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid #59ACE0;
+}
+.wrapper{
+  margin: 0 0 10px 10px;
+}
+.wrapper>input{
+  margin: 3px;
+}
+@media (max-width: 520px){
+  .label{
+    text-align: left;
+  }
+  .row{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .label{
+    width: 100%;
+  }
+  .right-column{
+    margin-top: 10px;
+    width: 100%;
+  }
+  #name,#email,#number,textarea{
+    width: 90%;
+  }
+}

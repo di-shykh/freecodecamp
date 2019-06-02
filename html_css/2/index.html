@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Form</title>
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <form action="" id="survey-form">
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <div class="row">
+      <div class="label">
+        <label for="name" id="name-label">* Name:</label>
+      </div>
+      <div class="right-column">
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+        <label for="email" id="email-label">* Email:</label>
+      </div>
+      <div class="right-column">
+          <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+        <label for="number" id="number-label">* Age:</label>
+      </div>
+      <div class="right-column">
+        <input type="number" id="number" name="number" placeholder="Age" required min="0" max="120">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+        <label for="dropdown">
+          Which option best describes your current role?   
+        </label>
+      </div>
+      <div class="right-column">
+        <select name="dropdown" id="dropdown" aria-placeholder="Select an option">
+          <option value disabled>Select an option</option>
+          <option value="student" selected>Student</option>
+          <option value="full time job">Full Time Job</option>
+          <option value="full time leaner">Full Time Leaner</option>
+          <option value="prefer not to say">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+          <label for="recomendation">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+      </div>
+      <div class="right-column">
+        <div class="wrapper">
+          <input type="radio" name="recomendation" value="definitely" id="definitely" required><label for="definitely">Definitely</label>
+        </div>
+        <div class="wrapper">
+          <input type="radio" name="recomendation" value="maybe"id="maybe"><label for="maybe">Maybe</label>
+        </div>
+        <div class="wrapper">
+          <input type="radio" name="recomendation" value="not shre"id="not shre"><label for="not shre">Not sure</label>
+        </div> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+        <label for="dropdown2">What do you like most in FCC:</label>
+      </div>
+      <div class="right-column">
+          <select name="dropdown2" id="dropdown2">
+            <option value disabled selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open source">Open Source</option>
+          </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+        <label for="things">Things that should be improved in the future (Check all that apply):</label>
+      </div>
+      <div class="right-column">
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="front-end projects" id="front-end projects"><label for="front-end projects">Front-end Projects</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="back-end brojects" id="back-end brojects"><label for="back-end brojects">Back-end Projects</label>
+        </div> 
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="data visualization" id="data visualization"><label for="data visualization">Data Visualization</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="challenges"id="challenges"><label for="challenges">Challenges</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="open source community"id="open source community"><label for="open source community">Open Source Community</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="gitter help rooms"id="gitter help rooms"><label for="gitter help rooms">Gitter help rooms</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="videos"id="videos"><label for="videos">Videos</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="city meetups"id="city meetups"><label for="city meetups">City Meetups</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="wiki"id="wiki"><label for="wiki">Wiki</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="forum"id="forum"><label for="forum">Forum</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" name="things" value="additional courses"id="additional courses"><label for="additional courses">Additional Courses</label>
+        </div> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">
+          <label for="textarea">Any Comments or Suggestions?</label>
+      </div>
+      <div class="right-column">
+        <textarea name="textarea" id="textarea" cols="30" rows="3" placeholder="Enter your comment here.."></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <button type="submit" id="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
