@@ -1,0 +1,263 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Muli', sans-serif;
+  /*height:100%;*/
+}
+section{
+  width: 100%;
+  margin-top:60px;
+  min-height:100vh;
+}
+/*navbar*/
+nav{
+  width: 100%;
+  background: #f7f7f7;
+  position: fixed;
+  top:0;
+  left:0;
+  height: 60px;
+}
+ul{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 10px;
+  list-style: none;
+}
+nav li{
+  margin: 10px;
+}
+nav ul li a{
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.5s ease-out;
+}
+nav ul li a:hover{
+  color: lightgray;
+}
+/*weclome-section*/
+#weclome-section{
+  background-image:url('../images/bg.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#weclome-section p{
+  font-size: 1em;
+}
+#weclome-section .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-size: 2em;
+  text-align: center;
+}
+#weclome-section img{
+  width: 100px;
+  margin-right: 1em;
+}
+#weclome-section figure img{
+  border-radius: 50%;
+}
+.header{
+  font-size: 1.5em;
+  text-align: center;
+}
+/*projects section*/
+#projects{
+  display: grid;
+  justify-items: center;
+  height: auto;
+}
+#projects .wrapper-projects{
+  margin-top:1em;
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 20px;
+}
+#projects img{
+  max-width: 100%;
+  display: block;
+}
+#projects figure{
+  max-height: auto;
+}
+.footer{
+  text-align: center;
+  border: 1px solid lightgrey;
+  padding: 1em;
+}
+.btn{
+  border: 1px solid lightgrey;
+  padding: 1em;
+  height: 60px;
+  margin: 1em;
+}
+.item{
+  max-width: 80%;
+}
+.item:hover{
+  animation-name: hover;
+  animation-duration:1s;
+  animation-fill-mode:both;
+  animation-timing-function:ease-out;
+}
+#projects a{
+  font-size: 1.1em;
+  color: #222;
+  text-decoration: none;
+}
+.btn:hover{
+  color: white;
+  animation-name: grow;
+  animation-duration:1s;
+  animation-fill-mode:both;
+  animation-timing-function:ease-out;
+}
+@keyframes hover{
+  to{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px;
+  }
+}
+@keyframes grow{
+  to{
+    padding: 20px 30px;
+    background-color: lightgrey;
+  }
+}
+/*section contact*/
+#contacts{
+  background-color: #f7f7f7;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height:calc(100vh - 120px);
+}
+#contacts p{
+  padding: 0.5em 0;
+  font-size: 1em;
+  text-align: center;
+}
+#contacts a{ 
+  text-decoration: none;
+  font-size: 1em;
+  color: #222;
+}
+.contact-links{
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  text-align: center;
+}
+#contacts a:hover{
+    animation-name: donwY;
+    animation-duration:0.5s;
+    animation-fill-mode:both;
+    animation-timing-function:ease-out;
+}
+@keyframes donwY{
+  to{
+    position: relative;
+    top: 20px;
+  }
+}
+/*footer*/
+footer{
+  padding: 1em;
+  text-align: center;
+  border-top: 2px solid #222;
+  color: #222;
+  background-color: #f7f7f7;
+  height: 60px;
+}
+footer a{
+  text-decoration: none;
+}
+/*Media queries*/
+@media (min-width: 768px){
+  .header{
+    font-size: 2.5em;
+  }
+  /*weclome section*/
+  #weclome-section p{
+    font-size: 2.5em;
+  }
+  h1{
+    font-size: 3em;
+  }
+  #weclome-section img{
+    width: 200px;
+    margin-right: 0;
+  }
+  #weclome-section .wrapper{
+    padding-right: 10px;
+  }
+  /*projects section*/
+  #projects .wrapper-projects{
+    grid-template-columns: repeat(2,minmax(250px,380px));
+    grid-gap: 20px 20px;
+    margin: 1em;
+  }
+  .item{
+    max-width: 100%;
+    max-height: 405px;
+  }
+  #projects img{
+    max-width: 100%;
+  }
+  /*contacts section*/
+  #contacts p{
+    font-size: 1.2em;
+  }
+  #contacts a{ 
+    font-size: 1.5em;
+    padding: 1em 2em;
+  }
+}
+@media (min-width: 992px){
+  .header{
+    font-size: 3em;
+  }
+  /*weclome section*/
+  #weclome-section p{
+    font-size: 3em;
+  }
+  h1{
+    font-size: 4em;
+  }
+  #weclome-section img{
+    width: 250px;
+    margin-right: 0;
+  }
+  #weclome-section .wrapper{
+    padding-right: 20px;
+  }
+  /*projects section*/
+  #projects .wrapper-projects{
+    grid-template-columns: repeat(3,minmax(250px,380px));
+  }
+  /*contacts section*/
+  #contacts p{
+    font-size: 1.2em;
+  }
+  #contacts a{ 
+    font-size: 1.5em;
+    padding: 1em 2em;
+  }
+}
