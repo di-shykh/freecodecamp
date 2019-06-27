@@ -19,6 +19,7 @@ nav{
   top:0;
   left:0;
   height: 60px;
+  z-index: 100;
 }
 ul{
   display: flex;
@@ -40,8 +41,8 @@ nav ul li a{
 nav ul li a:hover{
   color: lightgray;
 }
-/*weclome-section*/
-#weclome-section{
+/*welcome-section*/
+#welcome-section{
   background-image:url('../images/bg.jpg');
   background-repeat:no-repeat;
   background-size:cover;
@@ -52,10 +53,10 @@ nav ul li a:hover{
   align-items: center;
   flex-direction: row;
 }
-#weclome-section p{
+#welcome-section p{
   font-size: 1em;
 }
-#weclome-section .wrapper{
+#welcome-section .wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,11 +66,11 @@ h1{
   font-size: 2em;
   text-align: center;
 }
-#weclome-section img{
+#welcome-section img{
   width: 100px;
   margin-right: 1em;
 }
-#weclome-section figure img{
+#welcome-section figure img{
   border-radius: 50%;
 }
 .header{
@@ -81,6 +82,7 @@ h1{
   display: grid;
   justify-items: center;
   height: auto;
+  padding-top: 60px;
 }
 #projects .wrapper-projects{
   margin-top:1em;
@@ -163,6 +165,7 @@ h1{
   display: flex;
   justify-content: space-around;
   width: 90%;
+  max-width: 980px;
   text-align: center;
 }
 #contacts a:hover{
@@ -194,18 +197,18 @@ footer a{
   .header{
     font-size: 2.5em;
   }
-  /*weclome section*/
-  #weclome-section p{
+  /*welcome section*/
+  #welcome-section p{
     font-size: 2.5em;
   }
   h1{
     font-size: 3em;
   }
-  #weclome-section img{
+  #welcome-section img{
     width: 200px;
     margin-right: 0;
   }
-  #weclome-section .wrapper{
+  #welcome-section .wrapper{
     padding-right: 10px;
   }
   /*projects section*/
@@ -216,7 +219,7 @@ footer a{
   }
   .item{
     max-width: 100%;
-    max-height: 405px;
+    max-height: 399px;
   }
   #projects img{
     max-width: 100%;
@@ -227,37 +230,29 @@ footer a{
   }
   #contacts a{ 
     font-size: 1.5em;
-    padding: 1em 2em;
+    padding: 1em 1em;
   }
 }
 @media (min-width: 992px){
   .header{
     font-size: 3em;
   }
-  /*weclome section*/
-  #weclome-section p{
+  /*welcome section*/
+  #welcome-section p{
     font-size: 3em;
   }
   h1{
     font-size: 4em;
   }
-  #weclome-section img{
+  #welcome-section img{
     width: 250px;
     margin-right: 0;
   }
-  #weclome-section .wrapper{
+  #welcome-section .wrapper{
     padding-right: 20px;
   }
   /*projects section*/
   #projects .wrapper-projects{
     grid-template-columns: repeat(3,minmax(250px,380px));
-  }
-  /*contacts section*/
-  #contacts p{
-    font-size: 1.2em;
-  }
-  #contacts a{ 
-    font-size: 1.5em;
-    padding: 1em 2em;
   }
 }
